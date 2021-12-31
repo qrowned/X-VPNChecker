@@ -1,0 +1,10 @@
+{
+  "id": "xvpnchecker_velocity",
+  "name": "XVPNChecker",
+  "version": "1.0.0",
+  "url": "https://qrowned.dev/",
+  "authors": [
+    "qrowned"
+  ],
+  "main": "dev.qrowned.vpnchecker.velocity.VPNCheckerVelocityBootstrap"
+}

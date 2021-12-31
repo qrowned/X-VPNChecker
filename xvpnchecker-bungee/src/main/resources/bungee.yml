@@ -1,0 +1,4 @@
+name: XVPNChecker
+main: dev.qrowned.vpnchecker.bungee.VPNCheckerBungeeBootstrap
+author: qrowned
+version: 1.0.0

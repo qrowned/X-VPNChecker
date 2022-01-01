@@ -17,7 +17,7 @@
 * []() <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="java" width="20" height="20"/> Java
 * []() <img src="https://www.vectorlogo.zone/logos/minecraft/minecraft-icon.svg" alt="minecraft" height="20"/> Velocity and BungeeCord
 
-## Installation
+## ⛏ Installation
 
 1. Download the latest [release](https://github.com/qrowned/XVPNChecker/releases).
 2. Choose the right version for your environment. (Velocity or BungeeCord)
@@ -25,7 +25,7 @@
 4. Start the proxy.
 5. Configure the plugin.
 
-## Configuration
+## ⚙️ Configuration
 
 1. Go to [ProxyCheck.io](https://proxycheck.io/) and generate an API-KEY.
 2. Put the generated API-KEY into the config.json file.

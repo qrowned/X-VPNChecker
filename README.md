@@ -24,3 +24,9 @@
 3. Put the jar file into the plugins folder.
 4. Start the proxy.
 5. Configure the plugin.
+
+## Configuration
+
+1. Go to [ProxyCheck.io](https://proxycheck.io/) and generate an API-KEY.
+2. Put the generated API-KEY into the config.json file.
+3. Alternatively: Configure the whitelisted UUIDs.

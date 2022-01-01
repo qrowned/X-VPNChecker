@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/qrowned/XVPNChecker">
-    <img src="https://luca.rip/W6eFUHwqdN" alt="Logo" width="117" height="121">
+    <img src="https://cdn.qrowned.dev/xvpnchecker/logo.png" alt="Logo" width="117" height="121">
   </a>
 
 <h3 align="center">X-VPNChecker</h3>

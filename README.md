@@ -4,7 +4,7 @@
     <img src="https://luca.rip/W6eFUHwqdN" alt="Logo" width="117" height="121">
   </a>
 
-<h3 align="center">XVPNChecker</h3>
+<h3 align="center">X-VPNChecker</h3>
 <br>
   <p align="center">
     This Velocity/BungeeCord plugin is a simple VPN Checker. <br />

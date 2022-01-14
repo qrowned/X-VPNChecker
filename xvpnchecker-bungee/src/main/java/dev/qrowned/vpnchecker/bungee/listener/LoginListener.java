@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import dev.qrowned.vpnchecker.common.VPNCheckerPlugin;
 import dev.qrowned.vpnchecker.common.config.JsonConfig;
 import dev.qrowned.vpnchecker.common.config.impl.PluginConfig;
-import dev.qrowned.vpnchecker.common.http.ProxyCheckHttpClient;
+import dev.qrowned.vpnchecker.common.handler.ProxyCheckHandler;
 import dev.qrowned.vpnchecker.common.ip.IPCheck;
 import dev.qrowned.vpnchecker.common.ip.Operator;
 import dev.qrowned.vpnchecker.common.result.ProxyCheckResult;
@@ -22,15 +22,15 @@ import java.util.UUID;
 public final class LoginListener implements Listener {
 
     private final JsonConfig<PluginConfig> pluginConfig;
-    private final ProxyCheckHttpClient proxyCheckHttpClient;
+    private final ProxyCheckHandler proxyCheckHandler;
 
     public LoginListener(@NotNull VPNCheckerPlugin vpnCheckerPlugin) {
         this.pluginConfig = vpnCheckerPlugin.getPluginConfig();
-        this.proxyCheckHttpClient = vpnCheckerPlugin.getProxyCheckHttpClient();
+        this.proxyCheckHandler = vpnCheckerPlugin.getProxyCheckHandler();
     }
 
     @EventHandler(priority = Byte.MIN_VALUE)
-    public void handle(@NotNull LoginEvent event) throws JsonProcessingException {
+    public void handle(@NotNull LoginEvent event) {
         final PendingConnection connection = event.getConnection();
         final UUID uuid = connection.getUniqueId();
         final String ipAddress = connection.getAddress().getAddress().getHostAddress();
@@ -38,7 +38,7 @@ public final class LoginListener implements Listener {
         if (this.pluginConfig.getConfig()
                 .getWhitelistedIps().contains(uuid)) return;
 
-        final ProxyCheckResult proxyCheckResult = this.proxyCheckHttpClient.getProxyCheckResult(ipAddress);
+        final ProxyCheckResult proxyCheckResult = this.proxyCheckHandler.getProxyCheckResult(ipAddress);
         final IPCheck ipCheck = proxyCheckResult.getIpCheck();
         if (ipCheck == null || !ipCheck.isProxy()) return;
 

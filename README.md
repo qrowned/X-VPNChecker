@@ -8,7 +8,7 @@
 <br>
   <p align="center">
     This Velocity/BungeeCord plugin is a simple VPN Checker. <br />
-    It blocks players which are using a VPN!
+    It blocks players who are using a VPN!
     <br />
   </p>
   

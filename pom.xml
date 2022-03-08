@@ -7,7 +7,7 @@
     <groupId>dev.qrowned</groupId>
     <artifactId>XVPNChecker</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2-RELEASE</version>
+    <version>1.0.3-RELEASE</version>
 
     <modules>
         <module>xvpnchecker-bungee</module>

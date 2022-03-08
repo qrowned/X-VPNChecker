@@ -42,7 +42,7 @@ public final class LoginListener implements Listener {
         final String ipAddress = connection.getAddress().getAddress().getHostAddress();
 
         if (this.pluginConfig.getConfig()
-                .getWhitelistedIps().contains(uuid)) return;
+                .getWhitelistedIps().contains(uuid) || ipAddress.equals("127.0.0.1")) return;
 
         event.registerIntent(VPNCheckerBungeeBootstrap.getInstance());
 

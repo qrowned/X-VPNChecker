@@ -31,10 +31,10 @@ public final class LoginListener {
     @Subscribe(order = PostOrder.FIRST)
     public EventTask handle(@NotNull LoginEvent event) {
         final Player player = event.getPlayer();
-        if (this.pluginConfig.getConfig()
-                .getWhitelistedIps().contains(player.getUniqueId())) return null;
-
         final String hostAddress = player.getRemoteAddress().getAddress().getHostAddress();
+
+        if (this.pluginConfig.getConfig()
+                .getWhitelistedIps().contains(player.getUniqueId()) || hostAddress.equals("127.0.0.1")) return null;
 
         return EventTask.async(() -> {
             final ProxyCheckResult proxyCheckResult = this.proxyCheckHandler.getProxyCheckResult(hostAddress);
